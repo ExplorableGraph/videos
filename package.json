@@ -1,0 +1,9 @@
+{
+  "name": "videos",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "@explorablegraph/explorable": "file:../explorable",
+    "node-fetch": "2.6.1"
+  }
+}
