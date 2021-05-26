@@ -19,5 +19,5 @@ const explorableFiles = {
 
 for await (const key of explorableFiles) {
   const value = await explorableFiles.get(key);
-  console.log(value);
+  console.log(value.toString());
 }

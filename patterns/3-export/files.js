@@ -13,6 +13,6 @@ export default {
   },
 
   async get(key) {
-    return String(await fs.readFile(path.join(this.dirname, key)));
+    return await fs.readFile(path.join(this.dirname, key));
   },
 };

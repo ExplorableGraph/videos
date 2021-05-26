@@ -4,20 +4,20 @@ import fetch from "node-fetch"; // Node doesn't have fetch yet.
 // E.g. for site.com/a, site.com/b, site.com/c, get all those resources.
 // import fetch from "node-fetch"; // Node doesn't have fetch yet.
 const explorableSite = {
-  url: "https://explorablegraph.github.io/hello/src/intro2/graphs/site/",
+  href: "https://explorablegraph.github.io/videos/patterns/service/",
 
   async *[Symbol.asyncIterator]() {
-    const url = new URL(".keys.json", this.url);
+    const url = new URL(".keys.json", this.href);
     const response = await fetch(url.href);
     const keys = await response.json();
     yield* keys;
   },
 
   async get(key) {
-    const url = new URL(key, this.url);
+    const url = new URL(key, this.href);
     const response = await fetch(url.href);
-    const buffer = await response.arrayBuffer();
-    return buffer;
+    const arrayBuffer = await response.arrayBuffer();
+    return Buffer.from(arrayBuffer);
   },
 };
 
