@@ -16,12 +16,12 @@ const explorableSite = {
   async get(key) {
     const url = new URL(key, this.url);
     const response = await fetch(url.href);
-    const text = await response.text();
-    return text;
+    const buffer = await response.arrayBuffer();
+    return buffer;
   },
 };
 
 for await (const key of explorableSite) {
   const value = await explorableSite.get(key);
-  console.log(value);
+  console.log(value.toString());
 }

@@ -10,6 +10,5 @@ const files = await fs.readdir(filesFolder);
 for (const fileName of files) {
   const filePath = path.join(filesFolder, fileName);
   const buffer = await fs.readFile(filePath);
-  const text = String(buffer);
-  console.log(text);
+  console.log(buffer.toString());
 }
