@@ -2,7 +2,6 @@ import fetch from "node-fetch"; // Node doesn't have fetch yet.
 
 // Display all the (route, resource) results at a given net location.
 // E.g. for site.com/a, site.com/b, site.com/c, get all those resources.
-// import fetch from "node-fetch"; // Node doesn't have fetch yet.
 const explorableSite = {
   href: "https://explorablegraph.github.io/videos/patterns/site/",
 
