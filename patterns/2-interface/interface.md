@@ -30,3 +30,18 @@
   async get(key) {},
 };
 ```
+
+```js
+{
+  async *[Symbol.asyncIterator]() {},
+  async get(...keys) {},
+};
+```
+
+```js
+{
+  async *[Symbol.asyncIterator]() {},
+  async get(...keys) {},
+  async set(...keys, value) {}
+};
+```
