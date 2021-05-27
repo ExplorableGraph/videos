@@ -4,7 +4,7 @@ import fetch from "node-fetch"; // Node doesn't have fetch yet.
 // E.g. for site.com/a, site.com/b, site.com/c, get all those resources.
 // import fetch from "node-fetch"; // Node doesn't have fetch yet.
 const explorableSite = {
-  href: "https://explorablegraph.github.io/videos/patterns/service/",
+  href: "https://explorablegraph.github.io/videos/patterns/site/",
 
   async *[Symbol.asyncIterator]() {
     const url = new URL(".keys.json", this.href);
