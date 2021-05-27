@@ -1,0 +1,36 @@
+digraph g {
+  rankdir=LR;
+  "" [label="/"];
+  "" -> "/object";
+  "/object" [label="object"];
+  "/object" -> "/object/Alice";
+  "/object/Alice" [label="Alice"];
+  "/object" -> "/object/Bob";
+  "/object/Bob" [label="Bob"];
+  "/object" -> "/object/Carol";
+  "/object/Carol" [label="Carol"];
+  "" -> "/files";
+  "/files" [label="files"];
+  "/files" -> "/files/Alice";
+  "/files/Alice" [label="Alice"];
+  "/files" -> "/files/Bob";
+  "/files/Bob" [label="Bob"];
+  "/files" -> "/files/Carol";
+  "/files/Carol" [label="Carol"];
+  "" -> "/function";
+  "/function" [label="function"];
+  "/function" -> "/function/Alice";
+  "/function/Alice" [label="Alice"];
+  "/function" -> "/function/Bob";
+  "/function/Bob" [label="Bob"];
+  "/function" -> "/function/Carol";
+  "/function/Carol" [label="Carol"];
+  "" -> "/site";
+  "/site" [label="site"];
+  "/site" -> "/site/Alice";
+  "/site/Alice" [label="Alice"];
+  "/site" -> "/site/Bob";
+  "/site/Bob" [label="Bob"];
+  "/site" -> "/site/Carol";
+  "/site/Carol" [label="Carol"];
+}
