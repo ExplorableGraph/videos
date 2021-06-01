@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 
 // Get a reference to the folder.
 const moduleFolder = path.dirname(fileURLToPath(import.meta.url));
-const filesFolder = path.resolve(moduleFolder, "../files");
+const filesFolder = path.resolve(moduleFolder, "../people");
 
 // Read the list of files in that folder.
 const files = await fs.readdir(filesFolder);
