@@ -1,7 +1,7 @@
 import fetch from "node-fetch"; // Node doesn't have fetch yet.
 
 export default {
-  url: "https://explorablegraph.github.io/videos/patterns/site/",
+  url: "https://explorablegraph.github.io/videos/approaches/site/",
 
   async *[Symbol.asyncIterator]() {
     const url = new URL(".keys.json", this.url);

@@ -11,8 +11,12 @@ const filesFolder = path.resolve(moduleFolder, "../people");
 const files = await fs.readdir(filesFolder);
 
 // Display the contents of each file in the console.
-for (const fileName of files) {
-  const filePath = path.join(filesFolder, fileName);
-  const buffer = await fs.readFile(filePath);
+const buffers = await Promise.all(
+  files.map((fileName) => {
+    const filePath = path.join(filesFolder, fileName);
+    return fs.readFile(filePath);
+  })
+);
+for (const buffer of buffers) {
   console.log(buffer.toString());
 }
