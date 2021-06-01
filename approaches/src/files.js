@@ -10,13 +10,16 @@ const filesFolder = path.resolve(moduleFolder, "../people");
 // Read the list of files in that folder.
 const files = await fs.readdir(filesFolder);
 
-// Display the contents of each file in the console.
+// For each file, read the file's contents.
 const buffers = await Promise.all(
-  files.map((fileName) => {
+  files.map(async (fileName) => {
     const filePath = path.join(filesFolder, fileName);
-    return fs.readFile(filePath);
+    const buffer = await fs.readFile(filePath);
+    return buffer;
   })
 );
+
+// Display the contents of all the files.
 for (const buffer of buffers) {
   console.log(buffer.toString());
 }
