@@ -5,7 +5,7 @@ const obj = {
   Carol: "Hello, Carol.",
 };
 
-for (const key in obj) {
+for (const key in obj2) {
   const value = obj[key];
   console.log(value);
 }
