@@ -1,0 +1,13 @@
+digraph g {
+  rankdir=LR;
+  node [shape=box; color=gray70];
+  edge [arrowhead=vee; arrowsize=0.75; color=gray60];
+
+  "" [label=""; shape=circle; width=0.10; color=gray40];
+  "" -> "/Alice" [label="Alice"];
+  "/Alice" [label="Hello, Alice."];
+  "" -> "/Bob" [label="Bob"];
+  "/Bob" [label="Hello, Bob."];
+  "" -> "/Carol" [label="Carol"];
+  "/Carol" [label="Hello, Carol."];
+}

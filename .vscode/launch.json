@@ -10,7 +10,18 @@
       "name": "Spike",
       "skipFiles": ["<node_internals>/**"],
       "program": "${file}",
-      "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.1.0/bin/node"
+      "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.3.0/bin/node"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "eg",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/node_modules/@explorablegraph/explorable/src/eg/eg.js",
+      "cwd": "${workspaceFolder}",
+      "args": ["unifying/3-class/site.js"],
+      "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.3.0/bin/node",
+      "runtimeArgs": ["--preserve-symlinks"]
     }
   ]
 }
